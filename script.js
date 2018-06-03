@@ -22,4 +22,6 @@ function countDown() {
     console.log(count);
     document.getElementById("timeLeft").innerHTML = Math.round(count / 60);
     }
+
+    document.getElementById("countDown").className = "hidden";
 }

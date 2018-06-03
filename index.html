@@ -4,6 +4,7 @@
 <head>
     <title>100 Days Buddy</title>
     <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -11,9 +12,9 @@
         <h1>100 Days Buddy</h1>
         <h2> Start your daily hour, then tweet your progress!</h2>
         <h3>Click the button to start your hour: 
-            <input id="countDown" type="button" value="clickme" onclick="countDown();">Start</input>
+            <input id="countDown" type="button" value="Start" onclick="countDown();"></input>
         </h3>
-        <h2>Time left: <h2 id="timeLeft"></h2> minutes.</h2>
+        <h2>Time left: <span id="timeLeft"></span> minutes.</h2>
     </div>  
 </body>
 </html>
