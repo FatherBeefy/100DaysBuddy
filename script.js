@@ -1,3 +1,5 @@
+
+
 function countDown() {
 
     var count = 3600; //An hour
@@ -23,5 +25,10 @@ function countDown() {
     document.getElementById("timeLeft").innerHTML = Math.round(count / 60);
     }
 
-    document.getElementById("countDown").className = "hidden";
+    document.getElementById("startLine").className = "hidden"; 
+
+    function pause() {
+        clearInterval(counter);
+    
+    }
 }

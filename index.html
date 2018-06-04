@@ -1,4 +1,5 @@
 
+
 <!doctype html>
 <html>
 <head>
@@ -9,11 +10,12 @@
 
 <body>
     <div>
-        <h1>100 Days Buddy</h1>
+        <h1 id="title">100 Days Buddy</h1>
         <h2> Start your daily hour, then tweet your progress!</h2>
-        <h3>Click the button to start your hour: 
-            <input id="countDown" type="button" value="Start" onclick="countDown();"></input>
+        <h3 id="startLine">Click the button to start your hour: 
+            <input id="countDown" type="button" value="Start" onclick="countDown();">
         </h3>
+        <input id="pause" type="button" value="Pause" onclick="(new countDown()).pause();">
         <h2>Time left: <span id="timeLeft"></span> minutes.</h2>
     </div>  
 </body>
