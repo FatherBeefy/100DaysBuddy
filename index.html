@@ -5,18 +5,25 @@
 <head>
     <title>100 Days Buddy</title>
     <script src="script.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
+    
 </head>
 
 <body>
-    <div>
-        <h1 id="title">100 Days Buddy</h1>
-        <h2> Start your daily hour, then tweet your progress!</h2>
-        <h3 id="startLine">Click the button to start your hour: 
-            <input id="countDown" type="button" value="Start" onclick="countDown();">
-        </h3>
-        <input id="pause" type="button" value="Pause" onclick="(new countDown()).pause();">
-        <h2>Time left: <span id="timeLeft"></span> minutes.</h2>
+    <div class="jumbotron">
+        <div class="container text-center">
+            <h1 class="" id="title">100 Days Buddy</h1>
+            <h2 class="small"> Start your daily hour, then tweet your progress!</h2>
+            <h3 id="startLine">Click Start to begin your hour</h3>
+                <input class="btn btn-primary" id="startButton" type="button" value="Start" onclick="countdown(); hideButton();">
+            
+            <input class="btn btn-secondary" type="button" value="Pause" onclick="cdpause()">
+            
+            <h2>Time left: <span id="timeLeft"></span> minutes.</h2>
+    </div>   
+
+            
     </div>  
 </body>
 </html>
