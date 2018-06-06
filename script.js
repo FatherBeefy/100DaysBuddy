@@ -1,18 +1,14 @@
 
 
 
-    
 var CCOUNT = 3600;
     
-var t; 
-
-var count = 3600;
+var t, count;
 
 function cddisplay() {
     // displays time in span
-    document.getElementById('timeLeft').innerHTML = Math.round(count / 60);
-   
-}; 
+    document.getElementById('timespan').innerHTML = Math.floor(count / 60);
+};
 
 function countdown() {
     // starts countdown
@@ -23,16 +19,22 @@ function countdown() {
             var url = "https://www.twitter.com/";
             var windowName = "new window";
             window.open(url, windowName, "height=200,width=200");
-        return;
     } else {
         count--;
         t = setTimeout("countdown()", 1000);
-    }return;
+    }
 };
 
 function cdpause() {
     // pauses countdown
     clearTimeout(t);
+};
+
+function cdreset() {
+    // resets countdown
+    cdpause();
+    count = CCOUNT;
+    cddisplay();
 };
 
 function hideButton() {
@@ -41,7 +43,6 @@ function hideButton() {
     document.getElementById("startLine").innerHTML = "Kick some bum!";
 }
 
-
-
-
-console.log(count);
+function showButton() {
+    document.getElementById("startButton").classList.remove("disabled");
+}

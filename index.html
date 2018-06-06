@@ -10,7 +10,7 @@
     
 </head>
 
-<body>
+<body onload="cdreset()">
     <div class="jumbotron">
         <div class="container text-center">
             <h1 class="" id="title">100 Days Buddy</h1>
@@ -18,12 +18,20 @@
             <h3 id="startLine">Click Start to begin your hour</h3>
                 <input class="btn btn-primary" id="startButton" type="button" value="Start" onclick="countdown(); hideButton();">
             
-            <input class="btn btn-secondary" type="button" value="Pause" onclick="cdpause()">
+            <input class="btn btn-secondary" type="button" value="Pause" onclick="cdpause(); showButton()">
+            <input class="btn btn-danger" type="button" value="Reset" onclick="cdreset(); showButton">
             
-            <h2>Time left: <span id="timeLeft"></span> minutes.</h2>
+            <h2>Time left: <span id="timespan"></span> minutes.</h2>
     </div>   
 
             
     </div>  
 </body>
 </html>
+
+<!-- <body onload="cdreset()">
+<span id="timespan"></span>
+<input type="button" value="Start" onclick="countdown()">
+<input type="button" value="Stop" onclick="cdpause()">
+<input type="button" value="Reset" onclick="cdreset()">
+</body> -->
